@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("fonts/OpenSans-Regular.woff") format("woff");
+}
+
+body {
+  background-color: azure;
+  font-family: "Open Sans";
+}
+
+div {
+  color: rgb(255, 255, 255);
+  & > p {
+    background-color: palegreen;
+  }
+}
+
+img {
+  height: 300px;
+  width: 300px;
+}
