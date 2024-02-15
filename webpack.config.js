@@ -8,7 +8,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'build'),
-        assetModuleFilename: 'assets/[name].[ext]',
+        assetModuleFilename: 'assets/[name][ext]',
         clean: true,
     },
     plugins: [
@@ -47,11 +47,11 @@ module.exports = {
                 generator: {
                     filename: 'fonts/[name][ext]',
                 },
+                dependency: { not: ['url'] },
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
                 use: [
-                    'file-loader',
                     {
                         loader: 'image-webpack-loader',
                         options: {
